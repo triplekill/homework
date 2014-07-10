@@ -35,6 +35,38 @@ module.exports = function (app) {
       else 
         res.redirect('/'); 
   });
+/////////////////////////////////
+  app.get('/useradd2', function(req, res) {
+      if (!req.isAuthenticated()) { 
+        res.render('adduser', {});
+      }
+      else 
+      res.redirect('/');  
+  });
+  app.post('/useradd2', function(req, res) {
+        Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
+            if (err) {
+              return res.render("adduser", {info: "Sorry. That username already exists. Try again."});
+            }
+
+            passport.authenticate('local')(req, res, function () {
+              res.redirect('/');
+            });
+        });
+  });
+//////////////////////////////////////////////////////
+
+  app.get('/ssh', function(req, res) {
+      if (req.isAuthenticated()) { res.render('ssh', {}); }
+      else res.redirect('/');  
+  });
+
+  app.post('/ssh', function(req, res) {
+      res.redirect('/main');
+  });
+
+
+///////////////////////////////////////////////////
 
   app.get('/', function(req, res) {
       res.render('login', { user : req.user });
@@ -49,12 +81,8 @@ module.exports = function (app) {
       res.redirect('/');
   });
 
-//404 
-  app.get('*', function(req, res) {
-    console.log('404 handler..')
-    res.render('404', {
-        status: 404
-    });
+  app.get('/main2', function(req, res) {
+      res.render('main2', { title : "ssad" });
   });
 
 };
