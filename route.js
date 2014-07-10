@@ -48,4 +48,13 @@ module.exports = function (app) {
       req.logout();
       res.redirect('/');
   });
+
+//404 
+  app.get('*', function(req, res) {
+    console.log('404 handler..')
+    res.render('404', {
+        status: 404
+    });
+  });
+
 };
