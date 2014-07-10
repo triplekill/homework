@@ -1,0 +1,191 @@
+<html>
+<head>
+  <title></title>
+  <meta charset="GBK">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"> <!-- load bootstrap css -->
+  <link rel="stylesheet" href="./fontawesome/css/font-awesome.min.css"> <!-- load fontawesome -->
+  <style>
+  .sidebar {
+  display: block;
+  float: left;
+  width: 190px;
+  background: #fff;
+}
+.content {
+  display: block;
+  overflow: hidden;
+  width: auto;
+}
+
+.sidebar-nav {
+  border-bottom: 1px solid rgba(195, 195, 195, 1);
+  background-image: -webkit-linear-gradient(left, color-stop(#f4f4f4 10px), color-stop(#ebebeb 10px));
+  background-image: linear-gradient(to right, #f4f4f4 10px, #ebebeb 10px);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff4f4f4', endColorstr='#ffebebeb', GradientType=1);
+}
+.sidebar-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sidebar-nav ul li,
+.sidebar-nav ul a {
+  display: block;
+}
+.sidebar-nav ul a {
+  padding: 10px 20px;
+  color: #616161;
+  border-top: 1px solid rgba(220, 220, 220, 1);
+  box-shadow: 0px 1px 0px rgba(253, 253, 253, 0.7) inset;
+  text-shadow: 0px 1px 0px rgba(115, 115, 115, 0.3);
+}
+.sidebar-nav ul a:hover,
+.sidebar-nav ul a:focus,
+.sidebar-nav ul a:active {
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar-nav ul ul a {
+  padding: 10px 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.sidebar-nav ul ul a:hover,
+.sidebar-nav ul ul a:focus,
+.sidebar-nav ul ul a:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.sidebar-nav-item {
+  padding-left: 5px;
+}
+.sidebar-nav-item-icon {
+  padding-right: 5px;
+}
+  </style>
+  <script src="./javascripts/jquery.js"></script>
+  <script src="./bootstrap/js/bootstrap.js"></script>
+  <script src="./javascripts/metismenu.min.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+         </button>
+        <a class="navbar-brand" style="font-family:Microsoft YaHei"><i class="fa fa-flash fa-lg">lleishenzhichui</i></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right ">
+        <li><a href="/msg" style="font-family:Microsoft YaHei"><i class="fa fa-envelope fa-lg">ÏûÏ¢</i></a></li>
+        <li class="dropdown">
+          <a href="#" style="font-family:Microsoft YaHei" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs fa-lg"> ÉèÖÃ</i></a> 
+          <ul class="dropdown-menu" role="menu">
+            <li role="presentation"><a href="/sysconfig" role="menuitem"><i class="fa fa-th-large">ÏµÍ³ÉèÖÃ</i></a></li>
+            <li role="presentation"><a href="/admin" role="menuitem"><i class="fa fa-users">ÓÃ»§¹ÜÀí</i></a></li>
+            <li role="presentation"><a href="/dic" role="menuitem"><i class="fa fa-file">×Öµä¹ÜÀí</i></a></li>
+
+          </ul>
+        </li>
+        <li><a href="/logout" style="font-family:Microsoft YaHei" ><i class="fa fa-sign-out fa-lg"> ÍË³ö</i></a></li>
+        <li><a href="/msg" style="font-family:Microsoft YaHei"><i class="fa fa-file-text fa-lg" style="color:black"> ½Ì³Ì</i></a></li>        
+        </ul>      
+      </div>
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+    
+      <div class="sidebar">
+    <div class="sidebar-nav">
+      <ul id="menu">
+          <li class="active"><!--sysytem start-->
+              <a href="#">system <span class="fa arrow"></span></a>
+              <ul>
+                  <li><a href="#">item 0.1</a></li>
+                  <li><a href="#">item 0.2</a></li>
+                  <li><a href="#">onokumus</a></li>
+                  <li><a href="#">item 0.4</a></li>
+              </ul>
+          </li><!--system end -->
+          <li><!--fuwu start-->
+              <a href="#">fuwu <span class="glyphicon arrow"></span></a>
+              <ul>
+                  <li><a href="#">item 1.1</a></li>
+                  <li><a href="#">item 1.2</a></li>
+                  <li>
+                      <a href="#">Menu 1.3 <span class="fa plus-times"></span></a>
+                      <ul>
+                          <li><a href="#">item 1.3.1</a></li>
+                          <li><a href="#">item 1.3.2</a></li>
+                          <li><a href="#">item 1.3.3</a></li>
+                          <li><a href="#">item 1.3.4</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">item 1.4</a></li>
+                  <li>
+                      <a href="#">Menu 1.5 <span class="fa plus-minus"></span></a>
+                      <ul>
+                          <li><a href="#">item 1.5.1</a></li>
+                          <li><a href="#">item 1.5.2</a></li>
+                          <li><a href="#">item 1.5.3</a></li>
+                          <li><a href="#">item 1.5.4</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </li><!--fuwu end -->
+          <li><!--db start-->
+              <a href="#">database <span class="glyphicon arrow"></span></a>
+              <ul>
+                  <li><a href="#">item 2.1</a></li>
+                  <li><a href="#">item 2.2</a></li>
+                  <li><a href="#">item 2.3</a></li>
+                  <li><a href="#">item 2.4</a></li>
+              </ul>
+          </li><!--db end -->
+          <li><!--app start-->
+              <a href="#">Application <span class="glyphicon arrow"></span></a>
+              <ul>
+                  <li><a href="#">item 2.1</a></li>
+                  <li><a href="#">item 2.2</a></li>
+                  <li><a href="#">item 2.3</a></li>
+                  <li><a href="#">item 2.4</a></li>
+              </ul>
+          </li><!--app end -->
+      </ul>
+</div></div>
+
+<script>
+    $(function () {
+        $('#menu').metisMenu({
+          toggle: false
+        });
+    });
+</script>
+
+      <div class="col-xs-10">
+        <h2 class="page-header">ÈÎÎñ±¨±í</h2>
+        <div class="table-responsive">
+        <form action="/useradd2" method="post">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <button type="submit" class="btn btn-default btn-lg">Add</button>
+    </form>
+        </div>
+      </div><!--col-xs-10-->
+
+    </div>  
+  </div><!--container-->
+</body>
+</html>
