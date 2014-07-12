@@ -35,6 +35,7 @@ module.exports = function (app) {
       else 
         res.redirect('/'); 
   });
+  
 /////////////////////////////////
   app.get('/useradd2', function(req, res) {
       if (!req.isAuthenticated()) { 
